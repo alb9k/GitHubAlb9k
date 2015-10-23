@@ -8,50 +8,70 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
- 
+
 @ManagedBean
 @SessionScoped
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 //	@ManagedProperty(value="Alby")
-	private String name;
+	  private String name;
     private String password;
-    
+
+    private String surname;
+
     private List<String> favoriteSports;
     private Map<String, String> spokenLanguages;
-    
+
     private Profession profession;
-    
-    
+		private int age;
+
+		public int getAge() {
+			return age;
+		}
+
+		public void setAge(int age){
+			this.age = age;
+		}
+
     public String login(){
     	return "welcome";
     }
-    
+
     public String beverages(){
     	return "beverages";
     }
-    
-    
+
+
     public String survey(){
     	return "input";
     }
- 
+
     public String getName() {
         return name;
     }
- 
+
     public void setName(String name) {
         this.name = name;
     }
+
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     public String getPassword() {
         return password;
     }
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
     @PostConstruct
     private void initialize() {
         System.out.println("Bean is initialized with the following user name: " + name);
