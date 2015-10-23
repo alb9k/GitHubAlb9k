@@ -25,7 +25,15 @@ public class User implements Serializable {
     private Map<String, String> spokenLanguages;
 
     private Profession profession;
+		private int age;
 
+		public int getAge() {
+			return age;
+		}
+
+		public void setAge(int age){
+			this.age = age;
+		}
 
     public String login(){
     	return "welcome";
