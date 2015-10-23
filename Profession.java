@@ -9,6 +9,15 @@ public class Profession implements Serializable {
 	
 	private String title;
     private String industry;
+    private int year;
+    
+    public int getYear() {
+    	return year;
+    }
+    
+    public void setYear() {
+    	this.year = year;
+    }
  
     public String getTitle() {
         return title;
