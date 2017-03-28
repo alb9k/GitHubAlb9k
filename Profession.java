@@ -9,7 +9,26 @@ public class Profession implements Serializable {
 	private String title;
 	private String industry;
 	private int year;
+	private int month;
+	private int day;
 
+	
+	public void setMonth() {
+		this.month = month;
+	}
+	
+	public int getMonth() {
+		return month;
+	}
+	
+	public void setDay() {
+		this.day = day;
+	}
+	
+	public int getDay() {
+		return day;
+	}
+	
 	public int getYear() {
 		return year;
 	}
